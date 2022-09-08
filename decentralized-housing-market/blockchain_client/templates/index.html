@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Decentralized Housing Market</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/custom.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Decentralized Housing Market</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Account Generator
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="/make/transaction">Buy a House</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="/view/transactions">View Transactions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://source.unsplash.com/1200x300/?house" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/1200x300/?living-room" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/1200x300/?property" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+
+
+          <div class="card-body">
+            <h4 class="card-title">Generate Account</h4>
+            <p class="card-text">Click on the button below to generate a public key and a private key</p>
+            <input type="button" class="btn btn-primary btn-lg" value="Generate Blockchain Account">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+
+        <div class="row">
+          <label class="col-sm-2">Public Key:</label>
+          <div class="col-sm-10">
+            <textarea id="public_key" rows="5" class="form-control" readonly></textarea>
+          </div>
+        </div>
+
+        <br>
+        
+        <div class="row">
+          <label class="col-sm-2">Private Key:</label>
+          <div class="col-sm-10">
+            <textarea id="private_key" rows="5" class="form-control" readonly></textarea>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row" id="warning" style="display:none">
+          <div class="col-sm-12">
+
+            <div class="alert alert-danger" role="alert">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+              IMPORTANT
+              <ul>
+                <li>Save you private and public keys. These keys cannot be recovered!</li>
+                <li>Don't share your private key with anyone!</li>
+              </ul> 
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+
+      $(function(){
+        $('input').click(function(){
+
+          $.ajax({
+            url: '/wallet/new',
+            type: 'GET',
+            success: function(response){
+              document.getElementById("private_key").innerHTML = response['private_key'];
+              document.getElementById("public_key").innerHTML = response['public_key'];
+              document.getElementById("warning").style.display = "block";
+            },
+            error: function(error){
+              console.log(error);
+            }
+          });
+        });
+      })
+
+
+    </script>
+
+
+
+  </body>
+
+</html>
